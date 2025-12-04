@@ -3,7 +3,6 @@
 A high-quality, stylized 3D Christmas tree web application built with React Three Fiber.
 
 ![Blue Christmas Tree](<img width="767" height="714" alt="image" src="https://github.com/user-attachments/assets/4aebde5a-dfde-4ea7-b4c3-9f187236b840" />)
-*(Note: You can replace this with a real screenshot)*
 
 ## Overview
 
