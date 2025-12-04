@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# Blue Christmas Tree
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-quality, stylized 3D Christmas tree web application built with React Three Fiber.
 
-Currently, two official plugins are available:
+![Blue Christmas Tree](https://github.com/leoxouyang/Blue-Christmas-Tree/assets/placeholder.png)
+*(Note: You can replace this with a real screenshot)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## React Compiler
+This project features a "volumetric" Christmas tree rendered in real-time using WebGL. It uses a particle/instance-based approach to create lush foliage and is decorated with a strictly blue and white color palette.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Volumetric Foliage**: Thousands of instanced meshes create a dense, realistic tree structure.
+- **Dynamic Lighting**: Glowing LED lights with emissive materials and bloom post-processing.
+- **Decorations**: Frosty blue baubles, glossy white spheres, and a custom 5-pointed star topper.
+- **Atmosphere**: Deep blue background with gently falling snow particles.
+- **Interactive**:
+  - **Auto-Rotate**: Toggle rotation on/off.
+  - **Zoom**: Adjust camera distance.
+- **Performance**: Optimized using `InstancedMesh` for rendering thousands of objects efficiently.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Framework**: React 19 + TypeScript + Vite
+- **3D Engine**: Three.js + React Three Fiber (@react-three/fiber)
+- **Helpers**: @react-three/drei
+- **Post-Processing**: @react-three/postprocessing
+- **Styling**: Tailwind CSS
+- **Animation**: Framer Motion
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/leoxouyang/Blue-Christmas-Tree.git
+    cd Blue-Christmas-Tree
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
+
+## License
+
+MIT
