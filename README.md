@@ -2,7 +2,7 @@
 
 A high-quality, stylized 3D Christmas tree web application built with React Three Fiber.
 
-![image](https://github.com/leoxouyang/Blue-Christmas-Tree/blob/main/Preview.png)
+![Blue Christmas Tree](https://github.com/leoxouyang/Blue-Christmas-Tree/blob/main/Preview.png)
 
 ## Overview
 
@@ -13,10 +13,12 @@ This project features a "volumetric" Christmas tree rendered in real-time using 
 - **Volumetric Foliage**: Thousands of instanced meshes create a dense, realistic tree structure.
 - **Dynamic Lighting**: Glowing LED lights with emissive materials and bloom post-processing.
 - **Decorations**: Frosty blue baubles, glossy white spheres, and a custom 5-pointed star topper.
-- **Atmosphere**: Deep blue background with gently falling snow particles.
-- **Interactive**:
-  - **Auto-Rotate**: Toggle rotation on/off.
-  - **Zoom**: Adjust camera distance.
+- **Atmosphere**: Deep blue background with gently falling snow particles and an infinite floor.
+- **Interactive Controls**:
+  - **Scene**: Zoom (Mouse Wheel & Slider), Auto-Rotate.
+  - **Lighting**: Adjustable Spotlight (Intensity, Color), Light Opacity, and Light Glow.
+  - **Environment**: Adjustable Floor Color, Brightness, and Saturation.
+  - **Tree**: Adjustable Ornament Glow.
 - **Performance**: Optimized using `InstancedMesh` for rendering thousands of objects efficiently.
 
 ## Tech Stack

@@ -8,7 +8,15 @@ const FOLIAGE_COUNT = 4000
 const BAUBLE_COUNT = 150
 const LIGHT_COUNT = 200
 
-export const VolumetricTree = () => {
+export const VolumetricTree = ({
+    ornamentGlow = 2,
+    lightGlow = 2,
+    lightOpacity = 1
+}: {
+    ornamentGlow?: number
+    lightGlow?: number
+    lightOpacity?: number
+}) => {
     const foliageMesh = useRef<THREE.InstancedMesh>(null)
     const baubleMesh = useRef<THREE.InstancedMesh>(null)
     const lightMesh = useRef<THREE.InstancedMesh>(null)
@@ -117,6 +125,9 @@ export const VolumetricTree = () => {
                     roughness={0.1}
                     metalness={0.8}
                     color="#ffffff"
+                    emissive="#ffffff"
+                    emissiveIntensity={ornamentGlow * 0.5}
+                    toneMapped={false}
                 />
             </instancedMesh>
 
@@ -125,9 +136,11 @@ export const VolumetricTree = () => {
                 <sphereGeometry args={[1, 8, 8]} />
                 <meshStandardMaterial
                     emissive="#ffffff"
-                    emissiveIntensity={2}
+                    emissiveIntensity={lightGlow}
                     toneMapped={false}
                     color="#ffffff"
+                    transparent
+                    opacity={lightOpacity}
                 />
             </instancedMesh>
 
